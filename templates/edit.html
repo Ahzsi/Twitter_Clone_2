@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block content %} (% load static %)
+
+<section class="content">
+  <div class="editPage">
+    <img src="{% static 'img/twitter.png' %}" alt="" class="webLogo" />
+    <h1>Edit</h1>
+  </div>
+  <section class="content_form">
+    <form
+      action="/edit/{{post.id}}/"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      {% csrf_token %}
+      <input type="text" name="Username" value="{{ post.Username}}" required />
+      <input type="text" name="body" value="{{post.body}}" />
+      <input type="file" name="image" />
+      {% if post.image.url %}
+      <img src="{{ post.image.url }}" class="post-image" alt="" width="100%" />
+      {% endif %}
+
+      <div class="butTon">
+        <a href="{% url '' %}"><button>Cancel</button></a>
+        <input type="submit" name="" id="" value="Update" />
+      </div>
+    </form>
+  </section>
+</section>
