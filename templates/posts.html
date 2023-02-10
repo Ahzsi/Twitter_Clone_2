@@ -50,25 +50,21 @@
           />
           {% endif %}
 
-          <form
-            action="{% url 'like' post.pk %}"
-            method="POST"
-            id="likes-form"
-          ></form>
-          {% csrf_token %}
-          <div class="sect">
-            <button
-              class="like-button"
-              type="submit"
-              ,
-              name="post_id"
-              ,
-              value="{{post.id}}"
-            >
-              &#10084;
-            </button>
-            {{post.likes}}
-          </div>
+          <form action="{% url 'like' post.pk %}" method="POST" id="likes-form">
+            {% csrf_token %}
+            <div class="sect">
+              <button
+                class="like-button"
+                type="submit"
+                ,
+                name="post_ID"
+                ,
+                value="{{post_ID}}"
+              >
+                &#10084;
+              </button>
+            </div>
+          </form>
         </div>
       </li>
       {% endfor %}
