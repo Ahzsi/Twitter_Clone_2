@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %} {% load static %}
 <section class="content">
   <div class="homePage">
-    <img src="{% static 'img/twitter.png' %}" alt="twitterPage" />
+    <img src="{% static 'img/twitter.png' %}" alt="twitterPage" class="Twitter-Logo"/>
     <h1>Home</h1>
   </div>
   <section class="content_form">
@@ -70,6 +70,7 @@
       {% endfor %}
     </ul>
   </section>
+  <script src="{% static 'js/posts.js' %}"></script>
 </section>
 
 {% endblock %}

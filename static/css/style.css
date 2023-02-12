@@ -1,2 +1,30 @@
 html,
+body {
+  height: fit-content;
+}
 
+h1 {
+  display: inline;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.content {
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  border-left: 1px solid;
+}
+
+.content-form {
+  padding: 10px 40px;
+  border-bottom: 1px solid #e5e8e9;
+  border-right: 1px solid #e5e8e9;
+  margin: 0 auto;
+}
+
+img.Twitter-Logo {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
