@@ -1,7 +1,7 @@
-{% extends "base.html" %} {% for %} {% load static %}
+{% extends "base.html" %} {% block content %} {% load static %}
 <section class="content">
   <div class="homePage">
-    <img src="{% static 'img/twitter.png' %}" alt="twitterPage" />
+    <img src="{% static 'img/twitter.png' %}" alt="twitterPage" class="Twitter-Logo"/>
     <h1>Home</h1>
   </div>
   <section class="content_form">
@@ -41,10 +41,36 @@
           <div class="timeOfPost">{{ post.created_at }}</div>
           <p>{{ post.body }}</p>
           <br />
+          {% if post.image.url%}
+          <img
+            class="image-content"
+            src="{{ post.image.url }}"
+            width="100%"
+            alt=""
+          />
+          {% endif %}
+
+          <form action="{% url 'like' post.pk %}" method="POST" id="likes-form">
+            {% csrf_token %}
+            <div class="sect">
+              <button
+                class="like-button"
+                type="submit"
+                ,
+                name="post_ID"
+                ,
+                value="{{post_ID}}"
+              >
+                &#10084;
+              </button>
+            </div>
+          </form>
         </div>
       </li>
+      {% endfor %}
     </ul>
   </section>
+  <script src="{% static 'js/posts.js' %}"></script>
 </section>
 
-{% endfor %}
+{% endblock %}

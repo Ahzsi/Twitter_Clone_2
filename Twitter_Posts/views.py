@@ -37,7 +37,7 @@ def edit(request, post_ID):
 
 
 def LikePost(request, post_ID):
-    post = Post.objects.get(id=post_ID)
+    post = Post.objects.get(id= post_ID)
     new_value = post.likes+1
     post.likes = new_value
     post.save()
