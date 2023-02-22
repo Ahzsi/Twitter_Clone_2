@@ -1,7 +1,11 @@
 {% extends "base.html" %} {% block content %} {% load static %}
 <section class="content">
   <div class="homePage">
-    <img src="{% static 'img/twitter.png' %}" alt="twitterPage" class="Twitter-Logo"/>
+    <img
+      src="{% static 'img/twitter.png' %}"
+      alt="twitterPage"
+      class="Twitter-Logo"
+    />
     <h1>Home</h1>
   </div>
   <section class="content_form">
@@ -41,7 +45,7 @@
           <div class="timeOfPost">{{ post.created_at }}</div>
           <p>{{ post.body }}</p>
           <br />
-          {% if post.image.url%}
+          {% if post.image.url %}
           <img
             class="image-content"
             src="{{ post.image.url }}"
@@ -61,8 +65,8 @@
                 ,
                 value="{{post_ID}}"
               >
-                &#10084;
-              </button>
+                &#10084;</button
+              >{{ post.likes }}
             </div>
           </form>
         </div>

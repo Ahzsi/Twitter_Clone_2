@@ -29,6 +29,21 @@ img.Twitter-Logo {
   display: inline-block;
 }
 
+.pic img {
+  vertical-align: middle;
+  height: 50px;
+  border-radius: 50%;
+  text-align: left;
+  float: left;
+  display: grid;
+}
+
+@media screen and (max-width: 500px) {
+  .posts li .name_body .name {
+    font-size: 20px;
+  }
+}
+
 .content_form input {
   width: 70%;
   padding: 10px;
@@ -64,20 +79,22 @@ img.Twitter-Logo {
 
 .content li .user_body {
   flex-basis: 85%;
+  display: block;
+  margin-left: 13vw;
 }
 
 .content li .user_body .name {
   font-weight: bold;
+  display: inline;
 }
 
 .content li .user_body .timeOfPost {
   color: gray;
 }
 
-@media screen and (max-width: 500px) {
-  .content li .user_body .name {
-    font-size: 20px;
-  }
+.content li .pic {
+  width: 20%;
+  position: absolute;
 }
 
 .content li .menu_logo {
@@ -132,13 +149,26 @@ button {
 }
 
 button.like-button {
-  color: red;
+  color: white;
 }
 
 img.image-content {
   height: 50vh;
   border-radius: 15px;
+  
 }
 .name-back {
   background-color: #00adef;
+}
+
+.posts li .dots {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 3px;
 }
