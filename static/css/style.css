@@ -80,6 +80,7 @@ img.Twitter-Logo {
 .content li .user_body {
   flex-basis: 85%;
   display: block;
+  margin-left: 13vw;
 }
 
 .content li .user_body .name {
@@ -148,13 +149,26 @@ button {
 }
 
 button.like-button {
-  color: red;
+  color: white;
 }
 
 img.image-content {
   height: 50vh;
   border-radius: 15px;
+  
 }
 .name-back {
   background-color: #00adef;
+}
+
+.posts li .dots {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 3px;
 }
