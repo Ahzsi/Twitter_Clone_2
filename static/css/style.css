@@ -97,12 +97,7 @@ img.Twitter-Logo {
   position: absolute;
 }
 
-.content li .menu_logo {
-  width: 20px;
-  position: absolute;
-  right: 30px;
-  top: 18px;
-}
+
 
 .content li .dots {
   display: none;
@@ -171,4 +166,11 @@ img.image-content {
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 3px;
+}
+
+.content li .menu_logo {
+  width: 20px;
+  position: absolute;
+  right: 30px;
+  top: 18px;
 }
