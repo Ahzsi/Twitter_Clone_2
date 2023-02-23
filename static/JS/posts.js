@@ -1,5 +1,5 @@
 $(function() {
-    $('.menu_logo').click(function() {
-        $(this).next().toggle();
-    })
+  $('.js-menu-icon').click(function() {
+    $(this).next().toggle();
+  })
 })
