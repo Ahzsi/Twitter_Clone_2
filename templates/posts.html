@@ -32,10 +32,10 @@
     <ul>
       {% for post in posts %}
       <li>
-        <img class="menu_logo" src="{% static 'img/dots.png' %}" />
+        <img class="menu_logo js-menu-icon" src="{% static 'img/dots.png' %}" />
         <div class="dots">
-          <a href="/delete/{{ post.id }}">Delete</a><br />
-          <a href="/edit/{{ post.id }}">Edit</a>
+          <a href="/delete/{{ post.id }}/">Delete</a><br />
+          <a href="/edit/{{ post.id }}/">Edit</a>
         </div>
         <div class="pic">
           <img src="{% static 'img/new icon.jpg' %}" />
@@ -74,6 +74,11 @@
       {% endfor %}
     </ul>
   </section>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
   <script src="{% static 'js/posts.js' %}"></script>
 </section>
 

@@ -1,6 +1,7 @@
 html,
 body {
   height: fit-content;
+  background-color: #00adef;
 }
 
 h1 {
@@ -20,6 +21,7 @@ h1 {
   padding: 10px 40px;
   border-bottom: 1px solid #e5e8e9;
   border-right: 1px solid #e5e8e9;
+  background-color: #e5e8e9;
   margin: 0 auto;
 }
 
@@ -69,6 +71,10 @@ img.Twitter-Logo {
   list-style: none;
 }
 
+li {
+  background-color: aliceblue;
+}
+
 .content li .logo {
   flex-basis: 15%;
 }
@@ -80,7 +86,7 @@ img.Twitter-Logo {
 .content li .user_body {
   flex-basis: 85%;
   display: block;
-  margin-left: 13vw;
+  margin-left: 7vw;
 }
 
 .content li .user_body .name {
@@ -97,10 +103,8 @@ img.Twitter-Logo {
   position: absolute;
 }
 
-
-
 .content li .dots {
-  display: none;
+  
   position: absolute;
   top: 40px;
   right: 15px;
@@ -111,9 +115,11 @@ img.Twitter-Logo {
   border-radius: 3px;
 }
 
+
+/* delete possibly
 .content li .dots a {
   text-decoration: none;
-}
+} */
 
 .homePage {
   display: flex;
@@ -121,11 +127,12 @@ img.Twitter-Logo {
   gap: 3%;
   border-bottom: 1px solid #e5e8e9;
   padding-bottom: 2%;
+  background-color: aliceblue;
 }
 
 input[type="submit"] {
   width: 22%;
-  background-color: #d3f4f6;
+  background-color: #00adef;
   border-radius: 3px;
   color: white;
   font-weight: 600;
@@ -150,22 +157,9 @@ button.like-button {
 img.image-content {
   height: 50vh;
   border-radius: 15px;
-  
 }
 .name-back {
   background-color: #00adef;
-}
-
-.posts li .dots {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 15px;
-    border: 1px solid #ccc;
-    background-color: white;
-    padding: 10px 15px;
-    font-size: 13px;
-    border-radius: 3px;
 }
 
 .content li .menu_logo {
